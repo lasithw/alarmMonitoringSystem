@@ -6,7 +6,7 @@ var settings = {
   host     : 'localhost',
   user     : 'root',
   password : '',
-  database : 'cams_temp'
+  database : 'cams'
 };
 
 function connectDatabase(){

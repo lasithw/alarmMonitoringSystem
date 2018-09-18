@@ -7,9 +7,9 @@ router.get('/', function (req, res, next) {
     res.json({ name: "abc" })
 });
 
-router.get('/getSiteDownList', function (req, res, next) {
+router.get('/getSiteDown2GList', function (req, res, next) {
     console.log(req.body)
-    query.siteDownList(req.body.type).then((data) => {
+    query.siteDown2GList(req.body.type).then((data) => {
             res.json(data)
 
     }).catch((err) => {
@@ -18,9 +18,9 @@ router.get('/getSiteDownList', function (req, res, next) {
 
 });
 
-router.get('/getPowerFailureList', function (req, res, next) {
+router.get('/getPowerFailure2GList', function (req, res, next) {
     console.log(req.body)
-    query.powerFailureList(req.body.type).then((data) => {
+    query.powerFailure2GList(req.body.type).then((data) => {
             res.json(data)
 
     }).catch((err) => {
@@ -29,9 +29,9 @@ router.get('/getPowerFailureList', function (req, res, next) {
 
 });
 
-router.get('/getHighroomList', function (req, res, next) {
+router.get('/getHighroom2GList', function (req, res, next) {
     console.log(req.body)
-    query.highroomList(req.body.type).then((data) => {
+    query.highroom2GList(req.body.type).then((data) => {
             res.json(data)
 
     }).catch((err) => {
@@ -40,9 +40,9 @@ router.get('/getHighroomList', function (req, res, next) {
 
 });
 
-router.get('/getTransmissionList', function (req, res, next) {
+router.get('/getTransmission2GList', function (req, res, next) {
     console.log(req.body)
-    query.transmissionList(req.body.type).then((data) => {
+    query.transmission2GList(req.body.type).then((data) => {
             res.json(data)
 
     }).catch((err) => {
@@ -51,9 +51,9 @@ router.get('/getTransmissionList', function (req, res, next) {
 
 });
 
-router.get('/getCellDownList', function (req, res, next) {
+router.get('/getCellDown2GList', function (req, res, next) {
     console.log(req.body)
-    query.callDownList(req.body.type).then((data) => {
+    query.callDown2GList(req.body.type).then((data) => {
             res.json(data)
 
     }).catch((err) => {
@@ -62,9 +62,9 @@ router.get('/getCellDownList', function (req, res, next) {
 
 });
 
-router.get('/getrtxDownList', function (req, res, next) {
+router.get('/getrtxDown2GList', function (req, res, next) {
     console.log(req.body)
-    query.rtxDownList(req.body.type).then((data) => {
+    query.rtxDown2GList(req.body.type).then((data) => {
             res.json(data)
 
     }).catch((err) => {

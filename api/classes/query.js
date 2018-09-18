@@ -1,9 +1,9 @@
 var con = require('../config/connection');
 
 var query = {
-    siteDownList(type) {
+    siteDown2GList(type) {
         return new Promise((resolve, reject) => {
-            var sql = 'SELECT count(*) FROM filter_alarms WHERE alarm_type_id=2';
+            var sql = 'SELECT count(*) FROM filter_alarms,alarms WHERE filter_alarms.alarm_id = alarms.alarm_id AND filter_alarms.alarm_type_id=2 AND alarms.generation = "2G"';
             var params = [type];
             con.query(sql, params, (err, rows) => {
                 if (err) {
@@ -22,9 +22,9 @@ var query = {
         })
     },
 
-    powerFailureList(type) {
+    powerFailure2GList(type) {
         return new Promise((resolve, reject) => {
-            var sql = 'SELECT count(*) FROM filter_alarms WHERE alarm_type_id=1';
+            var sql = 'SELECT count(*) FROM filter_alarms,alarms WHERE filter_alarms.alarm_id = alarms.alarm_id AND filter_alarms.alarm_type_id=1 AND alarms.generation = "2G"';
             var params = [type];
             con.query(sql, params, (err, rows) => {
                 if (err) {
@@ -43,9 +43,9 @@ var query = {
         })
     },
 
-    highroomList(type) {
+    highroom2GList(type) {
         return new Promise((resolve, reject) => {
-            var sql = 'SELECT count(*) FROM filter_alarms WHERE alarm_type_id=3';
+            var sql = 'SELECT count(*) FROM filter_alarms,alarms WHERE filter_alarms.alarm_id = alarms.alarm_id AND filter_alarms.alarm_type_id=3 AND alarms.generation = "2G"';
             var params = [type];
             con.query(sql, params, (err, rows) => {
                 if (err) {
@@ -64,9 +64,9 @@ var query = {
         })
     },
 
-    transmissionList(type) {
+    transmission2GList(type) {
         return new Promise((resolve, reject) => {
-            var sql = 'SELECT count(*) FROM filter_alarms WHERE alarm_type_id=4';
+            var sql = 'SELECT count(*) FROM filter_alarms,alarms WHERE filter_alarms.alarm_id = alarms.alarm_id AND filter_alarms.alarm_type_id=4 AND alarms.generation = "2G"';
             var params = [type];
             con.query(sql, params, (err, rows) => {
                 if (err) {
@@ -85,9 +85,9 @@ var query = {
         })
     },
 
-    callDownList(type) {
+    callDown2GList(type) {
         return new Promise((resolve, reject) => {
-            var sql = 'SELECT count(*) FROM filter_alarms WHERE alarm_type_id=5';
+            var sql = 'SELECT count(*) FROM filter_alarms,alarms WHERE filter_alarms.alarm_id = alarms.alarm_id AND filter_alarms.alarm_type_id=5 AND alarms.generation = "2G"';
             var params = [type];
             con.query(sql, params, (err, rows) => {
                 if (err) {
@@ -106,9 +106,9 @@ var query = {
         })
     },
 
-    rtxDownList(type) {
+    rtxDown2GList(type) {
         return new Promise((resolve, reject) => {
-            var sql = 'SELECT count(*) FROM filter_alarms WHERE alarm_type_id=6';
+            var sql = 'SELECT count(*) FROM filter_alarms,alarms WHERE filter_alarms.alarm_id = alarms.alarm_id AND filter_alarms.alarm_type_id=6 AND alarms.generation = "2G"';
             var params = [type];
             con.query(sql, params, (err, rows) => {
                 if (err) {
